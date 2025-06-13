@@ -267,8 +267,8 @@ main > section {
          -o-transition: all 0.8s ease 0s;
             transition: all 0.8s ease 0s;
 
-    background-color: rgba(0,0,0,.6);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    background-color: rgba(83, 74, 70, 0.6);
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3);
     padding: 5px 0;
 }
 
@@ -284,7 +284,7 @@ h1.navbar-brand {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #fff;
+    color: #ffffff;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
