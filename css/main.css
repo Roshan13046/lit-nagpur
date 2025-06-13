@@ -285,10 +285,10 @@ h1.navbar-brand {
 
 .navbar-inverse .navbar-nav > li > a {
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 1px solid;
+    letter-spacing: 1.5px;
+    border-bottom: 0.5px solid;
 }
 .navbar-inverse .navbar-nav > li > a:hover{
   color: #008ECC;
@@ -1635,21 +1635,21 @@ margin-top: 12%;
   }
 }
 .head-logo{
-  width: 15%;
+  width: 6%;
   float: left;
 }
 @media screen and (min-width:768px){
   .head-logo{
-    width: 12%;
+    width: 3%;
   }
 }
 
 .mainlogo{
-width: 40%;
+width: 5%;
 }
 @media screen and (min-width:768px){
   .mainlogo{
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
   }
 }
