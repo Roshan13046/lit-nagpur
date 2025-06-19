@@ -2,7 +2,7 @@
 
 body {
     background-color: #fff;
-    font-family: sans-serif;
+    font-family: Georgia, serif;
     font-size: 16px;
 }
 
@@ -33,7 +33,7 @@ a, a:hover, a:focus, .btn:focus {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: sans-serif;
+    font-family: Georgia, serif;
 }
 
 main > section {
@@ -267,7 +267,7 @@ main > section {
          -o-transition: all 0.8s ease 0s;
             transition: all 0.8s ease 0s;
 
-    background-color: rgba(0,0,0,.6);
+    background-color:  #D66F50;;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     padding: 5px 0;
 }
@@ -284,14 +284,20 @@ h1.navbar-brand {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #fff;
+    color:#261d1d;
     font-size: 14px;
+    font-weight: bold;
     text-transform: uppercase;
+    text-decoration: none !important;
     letter-spacing: 1.5px;
-    border-bottom: 0.5px solid;
+    /* border-bottom: 0.5px solid; */
+}
+
+.navbar-inverse .navbar-nav > li{
+     border-bottom: 0;
 }
 .navbar-inverse .navbar-nav > li > a:hover{
-  color: #008ECC;
+  color: #f3f6f1;
 }
 
 /*=================================================================
@@ -1421,10 +1427,7 @@ textarea.form-control {
     }
 }
 
-.munLogoTitle{
-  color: white;
-  letter-spacing: 2px;
-}
+
 .organizerName{
     font-size: 140%;
     letter-spacing: 2px;
@@ -1493,7 +1496,7 @@ margin-bottom: 5%;
     margin: 0 auto;
     border: 1px solid black;
     border-radius: 5px;
-    font-family: sans-serif;
+    font-family: Georgia, serif;
 
 }
 
@@ -1548,7 +1551,7 @@ margin-bottom: 5%;
     overflow: scroll;
     padding: 3% 2%;
     color: white;
-    font-family: sans-serif;
+    font-family: Georgia, serif;
     border-radius: 1%;
     border: 1px solid white;
 }
@@ -1607,7 +1610,7 @@ border-radius: 5px;
     padding: 0.5% 1.5%;
     color: white;
     letter-spacing: 1px;
-    font-family: sans-serif;
+    font-family: Georgia, serif;
     background: black;*/
     background: transparent;
     border: none;
@@ -1634,15 +1637,35 @@ border-radius: 5px;
 margin-top: 12%;
   }
 }
-.head-logo{
-  width: 6%;
-  float: left;
+
+
+/* Header css */
+.head-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
 }
-@media screen and (min-width:768px){
-  .head-logo{
-    width: 3%;
+
+@media screen and (min-width: 768px) {
+  .head-logo {
+    width: 30px;
+    height: 30px;
   }
 }
+
+.munLogoTitle {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1;
+  color: white; /* Adjust if needed */
+}
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 
 .mainlogo{
 width: 5%;
