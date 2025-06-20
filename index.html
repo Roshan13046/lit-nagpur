@@ -1,832 +1,789 @@
-
 <!DOCTYPE html>
 
 <html lang="en" class="no-js">
-    <head>
-        <!-- Open Graphic Tags -->
-        <meta property="fb:app_id" content="" />
-    <meta property="og:title" content="">
-    <meta property="og:url" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <link rel="apple-touch-icon" sizes="180x180" href="">
-    <link rel="icon" type="image/png" href="" sizes="32x32">
-    <link rel="icon" type="image/png" href="" sizes="16x16">
-    <link rel="shortcut icon" href="">
-    <meta name="theme-color" content="#000000">
 
-		<!-- Mobile Specific Meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <!-- Open Graphic Tags -->
+  <meta property="fb:app_id" content="" />
+  <meta property="og:title" content="">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <link rel="apple-touch-icon" sizes="180x180" href="">
+  <link rel="icon" type="image/png" href="" sizes="32x32">
+  <link rel="icon" type="image/png" href="" sizes="16x16">
+  <link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-		<!-- CSS
+  <meta name="theme-color" content="#000000">
+
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
 		================================================== -->
 
-		<!-- Fontawesome Icon font -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/jquery.fancybox.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/owl.carousel.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/slit-slider.css">
-		<!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/animate.css">
-		<!-- Main Stylesheet -->
-        <link rel="stylesheet" href="css/main.css">
+  <!-- Fontawesome Icon font -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- bootstrap.min -->
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <!-- bootstrap.min -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- bootstrap.min -->
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <!-- bootstrap.min -->
+  <link rel="stylesheet" href="css/slit-slider.css">
+  <!-- bootstrap.min -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/main.css">
 
-		<!-- Modernizer Script for old Browsers -->
-        <script src="js/modernizr-2.6.2.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> -->
 
-        <style>
-          .round-image {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover; /* Ensures image covers the circular area */
-          }
-
-          .hexagonal-round-image{
-            width: 265px;
-            height: 265px;
-            border-radius: 22%;
-            object-fit: cover;
-          }
+  <!-- Modernizer Script for old Browsers -->
+  <script src="js/modernizr-2.6.2.min.js"></script>
+  <!-- Bootstrap JS (Make sure jQuery and Popper are also included if using Bootstrap 4) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
+  <style>
+    .round-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      /* Ensures image covers the circular area */
+    }
+
+    .hexagonal-round-image {
+      width: 265px;
+      height: 265px;
+      border-radius: 22%;
+      object-fit: cover;
+    }
+
+
+    .contact-card {
+      background: rgba(219, 215, 215, 0.05);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      color: #fff;
+    }
 
 
 
-        </style>
+    .committee-section {
+      background: rgba(0, 0, 0, 0.05);
+      padding: 60px 0;
+    }
 
-    </head>
+    .committee-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
 
-    <body id="body">
+    .committee-card {
+      background: #fff;
+      border-radius: 10px;
+      width: 260px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
 
-		<!-- preloader -->
-		<div id="preloader">
-            <div class="loder-box">
-            	<div class="battery"></div>
-            </div>
-		</div>
-		<!-- end preloader -->
+    .committee-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
 
-        <!--
+    .committee-card img {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .committee-card h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .committee-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .committee-card button {
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      /* transition: background 0.3s ease; */
+    }
+
+    .committee-card button:hover {
+      background-color: #003f80;
+    }
+
+    /* Modal Styling */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 80px auto;
+      position: relative;
+    }
+
+    .modal h2 {
+      margin-top: 0;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: none;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body id="body">
+
+  <!-- preloader -->
+  <div id="preloader">
+    <div class="loder-box">
+      <div class="battery"></div>
+    </div>
+  </div>
+  <!-- end preloader -->
+
+  <!--
         Fixed Navigation
         ==================================== -->
-      <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
-  <div class="container">
-    <div class="navbar-header d-flex align-items-center">
-      <!-- responsive nav button -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!-- /responsive nav button -->
+  <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+    <div class="container">
+      <div class="navbar-header d-flex align-items-center">
+        <!-- responsive nav button -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- /responsive nav button -->
 
-      <!-- logo and title -->
-      <div class="brand-wrapper">
-        <img src="img/committees/main-logo.jpeg" class="head-logo" alt="Logo">
-        <h1 class="navbar-brand munLogoTitle">LITUMUN</h1>
+        <!-- logo and title -->
+        <div class="brand-wrapper">
+          <img src="img/committees/main-logo.jpeg" class="head-logo" alt="Logo">
+          <h1 class="navbar-brand munLogoTitle">LITUMUN</h1>
+        </div>
       </div>
+
+      <!-- main nav -->
+      <nav class="collapse navbar-collapse navbar-right" role="navigation">
+        <ul id="nav" class="nav navbar-nav">
+          <li><a href="#body">HOME</a></li>
+          <li><a href="#about">ABOUT US</a></li>
+          <li><a href="#service">COMMITTEES</a></li>
+          <li><a href="#register">REGISTER</a></li>
+          <li><a href="#social">CONTACT</a></li>
+        </ul>
+      </nav>
+      <!-- /main nav -->
     </div>
+  </header>
 
-    <!-- main nav -->
-    <nav class="collapse navbar-collapse navbar-right" role="navigation">
-      <ul id="nav" class="nav navbar-nav">
-        <li><a href="#body">HOME</a></li>
-        <li><a href="#about">ABOUT US</a></li>
-        <li><a href="#service">COMMITTEES</a></li>
-        <li><a href="#register">REGISTER</a></li>
-        <li><a href="#social">CONTACT</a></li>
-      </ul>
-    </nav>
-    <!-- /main nav -->
-  </div>
-</header>
-
-        <!--
+  <!--
         End Fixed Navigation
         ==================================== -->
 
-		<main class="site-content" role="main">
+  <main class="site-content" role="main">
 
-        <!--
+    <!--
         Home Slider
         ==================================== -->
 
-		<section id="home-slider">
-            <div id="slider" class="sl-slider-wrapper">
+    <section id="home-slider">
+      <div id="slider" class="sl-slider-wrapper">
 
-				<div class="sl-slider">
+        <div class="sl-slider">
 
-					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+          <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25"
+            data-slice1-scale="2" data-slice2-scale="2">
 
-						<div class="bg-img bg-img-1"></div>
+            <div class="bg-img bg-img-1"></div>
 
-						<div class="slide-caption">
-                            <div class="caption-content">
-                              <img src="img/committees/main-logo.jpeg" class="mainlogo hexagonal-round-image">
-                                <h2 class="animated fadeInDown">LITUMUN</h2>
-                                <span class="animated fadeInDown">16 - 17 August 2025</span>
-                                <!-- <a class="btn btn-blue btn-effect">Rise! Speak! Resolve!</a> -->
-                                 <h2>Rise! Speak! Resolve!</h2>
-                                <div class="row">
-              <!-- <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
+            <div class="slide-caption">
+              <div class="caption-content">
+                <img src="img/committees/main-logo.jpeg" class="mainlogo hexagonal-round-image">
+                <h2 class="animated fadeInDown">LITUMUN</h2>
+                <span class="animated fadeInDown">16 - 17 August 2025</span>
+                <!-- <a class="btn btn-blue btn-effect">Rise! Speak! Resolve!</a> -->
+                <h2>Rise! Speak! Resolve!</h2>
+                <div class="row">
+                  <!-- <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
 								<h2>REGISTER HERE</h2>
 							</div> -->
-              <div class="regForms">
-                <a  href="delegate-registration/index.htm" target="_blank" class="newRegFormsButton">Event Registration</a>
-                <a href="international-press-registration/index.htm" target="_blank" class="newRegFormsButton">Accomodation Registration</a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeeSEY0cP69tp4Obn_ogWG-9GcNNewweE5N1GU-nwLz6XyxA/viewform?usp=sf_link" target="_blank" class="newRegFormsButton">Other Registration</a>
+                  <div class="regForms">
+                    <a href="delegate-registration/index.htm" target="_blank" class="newRegFormsButton">Event
+                      Registration</a>
+                    <a href="international-press-registration/index.htm" target="_blank"
+                      class="newRegFormsButton">Accomodation Registration</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeeSEY0cP69tp4Obn_ogWG-9GcNNewweE5N1GU-nwLz6XyxA/viewform?usp=sf_link"
+                      target="_blank" class="newRegFormsButton">Other Registration</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-            </div>
-					</div>
 
-					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+          <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15"
+            data-slice1-scale="1.5" data-slice2-scale="1.5">
 
-						<div class="bg-img bg-img-2"></div>
-							<div class="slide-caption">
-                            <div class="caption-content">
-                              <img src="img/committees/main-logo.jpeg" class="mainlogo hexagonal-round-image">
-                                <h2 class="animated fadeInDown">LITUMUN</h2>
-                                <span class="animated fadeInDown">16 - 17 August 2025</span>
-                                <!-- <a class="btn btn-blue btn-effect">Rise! Speak! Resolve!</a> -->
-                                 <h2>Rise! Speak! Resolve!</h2>
-                                <div class="row">
-              <!-- <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
+            <div class="bg-img bg-img-2"></div>
+            <div class="slide-caption">
+              <div class="caption-content">
+                <img src="img/committees/main-logo.jpeg" class="mainlogo hexagonal-round-image">
+                <h2 class="animated fadeInDown">LITUMUN</h2>
+                <span class="animated fadeInDown">16 - 17 August 2025</span>
+                <!-- <a class="btn btn-blue btn-effect">Rise! Speak! Resolve!</a> -->
+                <h2>Rise! Speak! Resolve!</h2>
+                <div class="row">
+                  <!-- <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
 								<h2>REGISTER HERE</h2>
 							</div> -->
-              <div class="regForms">
-                <a  href="delegate-registration/index.htm" target="_blank" class="newRegFormsButton">Event Registration</a>
-                <a href="international-press-registration/index.htm" target="_blank" class="newRegFormsButton">Accomodation Registration</a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeeSEY0cP69tp4Obn_ogWG-9GcNNewweE5N1GU-nwLz6XyxA/viewform?usp=sf_link" target="_blank" class="newRegFormsButton">Other Registration</a>
+                  <div class="regForms">
+                    <a href="delegate-registration/index.htm" target="_blank" class="newRegFormsButton">Event
+                      Registration</a>
+                    <a href="international-press-registration/index.htm" target="_blank"
+                      class="newRegFormsButton">Accomodation Registration</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeeSEY0cP69tp4Obn_ogWG-9GcNNewweE5N1GU-nwLz6XyxA/viewform?usp=sf_link"
+                      target="_blank" class="newRegFormsButton">Other Registration</a>
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
-            </div>
 
-					</div>
+          <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3"
+            data-slice1-scale="2" data-slice2-scale="1">
 
-					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-
-						<div class="bg-img bg-img-3"></div>
-							<div class="slide-caption">
-                            <div class="caption-content">
-                              <img src="img/committees/main-logo.jpeg" class="mainlogo hexagonal-round-image">
-                                <h2 class="animated fadeInDown">LITUMUN</h2>
-                                <span class="animated fadeInDown">16 - 17 August 2025</span>
-                                <!-- <a class="btn btn-blue btn-effect">Rise! Speak! Resolve!</a> -->
-                                 <h2>Rise! Speak! Resolve!</h2>
-                                <div class="row">
-              <!-- <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
+            <div class="bg-img bg-img-3"></div>
+            <div class="slide-caption">
+              <div class="caption-content">
+                <img src="img/committees/main-logo.jpeg" class="mainlogo hexagonal-round-image">
+                <h2 class="animated fadeInDown">LITUMUN</h2>
+                <span class="animated fadeInDown">16 - 17 August 2025</span>
+                <!-- <a class="btn btn-blue btn-effect">Rise! Speak! Resolve!</a> -->
+                <h2>Rise! Speak! Resolve!</h2>
+                <div class="row">
+                  <!-- <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
 								<h2>REGISTER HERE</h2>
 							</div> -->
-              <div class="regForms">
-                <a  href="delegate-registration/index.htm" target="_blank" class="newRegFormsButton">Event Registration</a>
-                <a href="international-press-registration/index.htm" target="_blank" class="newRegFormsButton">Accomodation Registration</a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeeSEY0cP69tp4Obn_ogWG-9GcNNewweE5N1GU-nwLz6XyxA/viewform?usp=sf_link" target="_blank" class="newRegFormsButton">Other Registration</a>
+                  <div class="regForms">
+                    <a href="delegate-registration/index.htm" target="_blank" class="newRegFormsButton">Event
+                      Registration</a>
+                    <a href="international-press-registration/index.htm" target="_blank"
+                      class="newRegFormsButton">Accomodation Registration</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeeSEY0cP69tp4Obn_ogWG-9GcNNewweE5N1GU-nwLz6XyxA/viewform?usp=sf_link"
+                      target="_blank" class="newRegFormsButton">Other Registration</a>
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
-            </div>
 
-					</div>
+          <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15"
+            data-slice1-scale="1.5" data-slice2-scale="1.5">
 
-          <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-
-						<div class="bg-img bg-img-4"></div>
-							<div class="slide-caption">
-                            <div class="caption-content">
-                              <img src="img/committees/main-logo.jpeg" class="mainlogo hexagonal-round-image">
-                                <h2 class="animated fadeInDown">LITUMUN</h2>
-                                <span class="animated fadeInDown">16 - 17 August 2025</span>
-                                <!-- <a class="btn btn-blue btn-effect">Rise! Speak! Resolve!</a> -->
-                                 <h2>Rise! Speak! Resolve!</h2>
-                                <div class="row">
-              <!-- <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
+            <div class="bg-img bg-img-4"></div>
+            <div class="slide-caption">
+              <div class="caption-content">
+                <img src="img/committees/main-logo.jpeg" class="mainlogo hexagonal-round-image">
+                <h2 class="animated fadeInDown">LITUMUN</h2>
+                <span class="animated fadeInDown">16 - 17 August 2025</span>
+                <!-- <a class="btn btn-blue btn-effect">Rise! Speak! Resolve!</a> -->
+                <h2>Rise! Speak! Resolve!</h2>
+                <div class="row">
+                  <!-- <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
 								<h2>REGISTER HERE</h2>
 							</div> -->
-              <div class="regForms">
-                <a  href="delegate-registration/index.htm" target="_blank" class="newRegFormsButton">Event Registration</a>
-                <a href="international-press-registration/index.htm" target="_blank" class="newRegFormsButton">Accomodation Registration</a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeeSEY0cP69tp4Obn_ogWG-9GcNNewweE5N1GU-nwLz6XyxA/viewform?usp=sf_link" target="_blank" class="newRegFormsButton">Other Registration</a>
+                  <div class="regForms">
+                    <a href="delegate-registration/index.htm" target="_blank" class="newRegFormsButton">Event
+                      Registration</a>
+                    <a href="international-press-registration/index.htm" target="_blank"
+                      class="newRegFormsButton">Accomodation Registration</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeeSEY0cP69tp4Obn_ogWG-9GcNNewweE5N1GU-nwLz6XyxA/viewform?usp=sf_link"
+                      target="_blank" class="newRegFormsButton">Other Registration</a>
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
-            </div>
 
-					</div>
-
-				</div><!-- /sl-slider -->
+        </div><!-- /sl-slider -->
 
 
-                <!-- <nav id="nav-arrows" class="nav-arrows">
+        <!-- <nav id="nav-arrows" class="nav-arrows">
                     <span class="nav-arrow-prev">Previous</span>
                     <span class="nav-arrow-next">Next</span>
                 </nav> -->
 
 
-                <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
-                    <a href="javascript:;" class="sl-prev">
-                        <i class="fa fa-angle-left fa-3x"></i>
-                    </a>
-                    <a href="javascript:;" class="sl-next">
-                        <i class="fa fa-angle-right fa-3x"></i>
-                    </a>
-                </nav>
+        <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
+          <a href="javascript:;" class="sl-prev">
+            <i class="fa fa-angle-left fa-3x"></i>
+          </a>
+          <a href="javascript:;" class="sl-next">
+            <i class="fa fa-angle-right fa-3x"></i>
+          </a>
+        </nav>
 
 
-				<nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
-					<span class="nav-dot-current"></span>
-					<span></span>
-					<span></span>
-				</nav>
+        <nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
+          <span class="nav-dot-current"></span>
+          <span></span>
+          <span></span>
+        </nav>
 
-			</div><!-- /slider-wrapper -->
-		</section>
+      </div><!-- /slider-wrapper -->
+    </section>
 
-        <!--
+    <!--
         End Home SliderEnd
         ==================================== -->
+    <!-- about section -->
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
 
-			<!-- about section -->
-			<section id="about" >
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4 wow animated fadeInLeft">
-							<div class="recent-works">
-								<h3>OUR LEGACY</h3>
-								<div id="works">
-									<div class="work-item">
-										<p>LITU-MUN is Central India’s premier Model United Nations conference, proudly entering its 9th powerful edition in 2025. Founded in 2016 as LITMUN under the visionary leadership of Akshay Raje, the conference has grown into a beacon of academic excellence and dynamic youth diplomacy, now hosted by the Laxminarayan Innovation Technological University. Over the years, LITU-MUN has transformed into a melting pot of ideas, cultures, and leadership, bringing together some of the most passionate and articulate young minds from across the country.</p>
-									</div>
-									<div class="work-item">
-										<p>With a legacy built on the pillars of learning, introspection, and transformation, LITU-MUN stands as more than just a simulation—it’s a celebration of dialogue, global awareness, and character building. Held in the heart of a university that thrives on innovation and inclusion, the conference has consistently elevated the Model UN experience with high-caliber executive boards, diverse committees, and a vision that puts every delegate’s voice at the center.</p>
-									</div>
-                  <div class="work-item">
+        <!-- About LIT-Nagpur University -->
+        <div class="row">
+          <div class="col-md-12 wow animated fadeInUp">
+            <div class="welcome-block">
+              <h3 class="text-center aboutHeaderText">About LIT-Nagpur University</h3>
+              <div class="message-body">
+                <p>
+                  Consistent efforts put in by the organisers have made LIT MUN one of the most sought-after events for
+                  MUNers across the country.<br>
+                  So MUNers, mark the dates and be ready for some serious debating, exhausting sessions, and a lot of
+                  intellectual enrichment.
+                </p>
+                <p>
+                  Accredited with an A+ NAAC grade and home to NBA-accredited programs, the university offers a
+                  future-focused education on its expansive 78-acre campus, blending world-class infrastructure with
+                  decades of academic distinction. With strong industry collaboration and a culture of research and
+                  leadership, LIT University is where legacy meets limitless potential.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Our Legacy Carousel -->
+        <div class="row">
+          <div class="col-md-12 wow animated fadeInUp">
+            <div class="recent-works">
+              <h3 class="text-center aboutHeaderText">OUR LEGACY</h3>
+              <div id="legacyCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <div class="carousel-inner text-center">
+                  <div class="carousel-item active">
                     <p>
-                      As we step into 2025, LITU-MUN continues to raise the bar—offering a platform where diplomacy is lived, not learned, and where every resolution echoes the commitment of future leaders ready to reshape the world.
+                      LITU-MUN is Central India’s premier Model United Nations conference, proudly entering its 9th
+                      powerful edition in 2025. Founded in 2016 as LITMUN under the visionary leadership of Akshay Raje,
+                      the conference has grown into a beacon of academic excellence and dynamic youth diplomacy, now
+                      hosted by the Laxminarayan Innovation Technological University. Over the years, LITU-MUN has
+                      transformed into a melting pot of ideas, cultures, and leadership, bringing together some of the
+                      most passionate and articulate young minds from across the country.
                     </p>
                   </div>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-md-7 col-md-offset-1 wow animated fadeInRight">
-							<div class="welcome-block">
-								<h3>About LIT-Nagpur University</h3>
-						     	 <div class="message-body">
-									<img src="img/committees/munlogo.png" class="pull-left" alt="member">
-						       		<p>About LIT-Nagpur University.<br>
- Consistent efforts put in by the organisers have made LIT MUN one of the most sought-after event for MUNers across the country.<br>
- So MUNers, mark the dates and be ready for some serious debating, exhausting sessions and a lot of intellectual enrichment.</p>
-                        <p>
-                          Accredited with an A+ NAAC grade and home to NBA-accredited programs, the university offers a future-focused education on its expansive 78-acre campus, blending world-class infrastructure with decades of academic distinction. With strong industry collaboration and a culture of research and leadership, LIT University is where legacy meets limitless potential.
-                        </p>
-						     	 </div>
-						       	<!-- <a class="btn btn-border btn-effect pull-right" style="margin-bottom:1%;" onclick="AboutVaranasi()">About Varanasi</a>
-                    <a class="btn btn-border btn-effect pull-right" data-toggle="modal" data-target="#myModal">Welcome Letter</a> -->
-						    </div>
-						</div>
-					</div>
-				</div>
-        <!-- About Varanasi Popup -->
-  <div class="varanasipopup" id="varanasipop">
-    <button onclick="closevpop()"><img style="border-radius:50%;width:75%;" src="img/icons/close.png"></button>
-    <h1 class="head-varanasi">ABOUT VARANASI</h1>
-    <h3>VARANASI: THE CITY OF SPIRITUAL REBIRTH</h3>
-    <hr>
-    <p>It's often said that arriving in Varanasi can be a little overwhelming. One is greeted by chaos, colour and the feeling of stepping back in time. With its history dating back to 1400B.C., Varanasi is one of the world’s oldest continuously inhabited cities and is dripping in history and spirituality.<br>
-Mark Twain in his inimitable prose says: “Benares is older than history, older than tradition, older even than legend, and looks twice as old as all of them put together. I find that the site of the town was the beginning-place of the Creation. It was merely an upright “lingam,” at first, no larger than a stove-pipe, and stood in the midst of a shoreless ocean. This was the work of the God Vishnu. Later he spread the lingam out till its surface was ten miles across. Still, it was not large enough for the business; therefore, he presently built the globe around it. Benares is thus the centre of the earth.”
-</p>
-  <h3>THINGS TO DO</h3>
-  <hr>
-						<p>A boat ride across the sacred Ganges, perfectly captures the spirit of Varanasi. Countless candlelit paper boats with flowers carrying people’s prayers, float their way across the waters. Countless pilgrims take a holy dip in the waters, others meditate in solitude and the rest bow their heads in prayer along the Ghats. As the sun goes down, the evening ritual of worship, called the Ganga Aarti, unfolds.</p>
-						<p>Here are a few key things that you must try out while in Banaras:</p>
-						<h3>Explore BHU</h3>
-						<hr>
-						<p>The Banaras Hindu University is an internationally reputed University established in 1916 by Pandit Madan Mohan Malaviya. With a campus, spanning across 1300 acres, and buildings as majestic as forts, it houses a few totally amazing sights you wouldn't expect to find over here, like</p>
-						<div><ul class="instUL">
-							<li>The Vishwanath Temple, aka VT</li>
-							<li>The Bharat Kala Bhawan</li>
-							<li>The Trauma Center (state of the art hospital)</li>
-							<li>An Airstrip!</li>
-							<li>A World War II fighter plane</li>
-							<li>A Silver Plated Rolls Royce, to name a few.</li>
-						</ul></div>
-						<img>
-					<a href="https://www.google.co.in/maps/place/Sankat+Mochan+Hanuman+Temple/@25.282111,82.9977882,17z/data=!3m1!4b1!4m5!3m4!1s0x398e318c95346e23:0x82d034bc6d01bf83!8m2!3d25.2821062!4d82.9999769?hl=en" target="_blank" style="color:white;"><h3>The Sankat Mochan Temple</h3></a>
-					<hr>
-					<p>One of the most sacred Hindu temples dedicated to Lord Hanuman,  it is said that Tulsidas, (the author of the famous Hindu epic Ramacharitamanas) founded the Sankat Mochan temple.</p>
-					<p>Established in the 1970s, the Sankat Mochan festival continues the practice of performance in temples that is today quite rare. Performing in Sankat Mochan – no matter what the performance or who the performer (Muslims perform each year at the festival) – is considered a form of shringar, or “decoration” for the god in question, as well as hazri, or attendance in the god’s court, and shraddha and prem, or respect and love for the god.</p>
-					<img>
-					<a href="https://www.google.co.in/maps/place/Shri+Kashi+Vishwanath+Temple/@25.310858,83.0084896,17z/data=!3m1!4b1!4m5!3m4!1s0x398e2e21ee940b17:0x48600e4fcdfb7b13!8m2!3d25.3108532!4d83.0106783?hl=en" target="_blank" style="color:white;"><h3>The Kashi Vishwanath Temple</h3></a>
-					<hr>
-					<p>There are temples at almost every turn in Varanasi, but this is the most famous of the lot. Located in the heart of Varanasi, it stands on the western bank of  river Ganges. It is dedicated to Vishveswara – Shiva as lord of the universe. The current temple was built in 1776 by Ahalya Bai of Indore; the 800kg of gold plating on the tower and dome was supplied by Maharaja Ranjit Singh of Lahore 50 years later.</p>
-					<img>
-					<a href="https://www.google.co.in/maps/place/Assi+Ghat/@25.2893736,83.0042374,17z/data=!3m1!4b1!4m5!3m4!1s0x398e31ec318ede7f:0xdabfee5b220ac507!8m2!3d25.2893688!4d83.0064261?hl=en" target="_blank" style="color:white"><h3>The Ghats &#x2665;</h3></a>
-					<hr>
-					<p>No single picture can justify the chaotic yet serene beauty of the Ghats. The dream place of every Shutterbug, two of the must-visit ghats are the Assi Ghat and the Dashashwamedh Ghat. Both serve as a wonderful place to linger and people-watch while soaking up the atmosphere. Every evening at 7pm an elaborate ganga aarti ceremony with puja, fire and dance is staged here. With a bit of planning, this can be combined with a boat ride for an amazing experience!</p>
-					<img>
-					<h3>Explore on Foot</h3>
-					<hr>
-					<p>The narrow lanes crowded with cows, bulls, speeding bicycles is a fantastic experience. One look at the old buildings and you are drawn to its culture and tradition.  It is an adventure plus a lifetime opportunity with a terrific photo chance to passage down these ancient alleys of history. Plus, all the gallis either run towards or parallel to the ghats, so you'd never be lost in this gripping city.</p>
-					<h3>The Food!</h3>
-					<hr>
-					<img>
-					<p>Check out:</p>
-					<div>
-					<ul class="instUL">
-						<a href="https://www.google.co.in/maps/place/Limbdi+Corner/@25.2608429,82.9847467,17z/data=!3m1!4b1!4m5!3m4!1s0x398e322c9169c849:0xd9557e140ba17b8!8m2!3d25.2608381!4d82.9869354?hl=en" target="_blank" style="color:white;"><li>Chola-samosa at Limbdi Corner</li></a>
-						<a href="https://www.google.co.in/maps/search/Pehelwaan+Lassi/@25.2972521,82.9897961,14z/data=!3m1!4b1?hl=en" target="_blank" style="color:white;"><li>Lassi, Malaiyoo and rabri at Pehelwaan Lassi</li></a>
-						<li>Laddoos of Sankatmochan Temple</li>
-						<a href="https://www.google.co.in/maps/place/Blue+Lassi+Shop/@25.3123215,83.0092839,17z/data=!3m1!4b1!4m5!3m4!1s0x398e2e1edccc4ee1:0x75201798f943ce7!8m2!3d25.3123167!4d83.0114726?hl=en" target="_blank" style="color:white;"><li>Blue Lassi shop</li></a>
-						<li>Paan at Ravidas Gate</li>
-						<a href="https://www.google.co.in/maps/place/Kashi+Chat+Bhandar/@25.3094085,83.0038109,17z/data=!3m1!4b1!4m5!3m4!1s0x398e2e1d0e6c52cd:0xa8a3678baea40336!8m2!3d25.3094037!4d83.0059996?hl=en" target="_blank" style="color:white"><li>Kashi Chaat Bhandaar</li></a>
-					</ul>
-				</div>
-					<p>And loads of restaurant, about which you can consult from the students, according to your needs.</p>
-					<a href="https://www.google.co.in/maps/place/Sarnath,+Varanasi,+Uttar+Pradesh+221007/@25.3729682,83.0073453,14z/data=!3m1!4b1!4m5!3m4!1s0x398e2ee870d6a12b:0xa1c385b2ea1fa974!8m2!3d25.3761664!4d83.0227103?hl=en" target="_blank" style="color:white;"><h3>Sarnath</h3></a>
-					<hr>
-					<img>
-					<p>Approx 10 kms away from Varanasi lies the oldest site museum of the Archeological survey of India. Located right next to the excavated site, this museum has over five galleries and sculptures, artifacts dated from the 3rd Century BC to the 12th Century AD.</p>
-					<p>Right across the main hall is Shakyasimha gallery. Here, you can find most special pieces in the museum sandstone Lion Capital of the Mauryan Pillar, which became the national emblem of India. The sites like the Tree where Buddha attained nirvana, the first sermon to his 5 disciples are all fascinating even to a non Buddhist.</p>
-  </div>
-  <script>
-  function AboutVaranasi(){
-    document.getElementById("varanasipop").style.display = "block";
-  }
-
-  function closevpop(){
-    if(document.getElementById("varanasipop").style.display == "block"){
-  									document.getElementById("varanasipop").style.display = "none";
-                    }
-          }
-  </script>
-  <!-- / about varanasi popup -->
-			</section>
-
-
-      <!-- welcome letter Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Welcome Letter</h4>
+                  <div class="carousel-item">
+                    <p>
+                      With a legacy built on the pillars of learning, introspection, and transformation, LITU-MUN stands
+                      as more than just a simulation—it’s a celebration of dialogue, global awareness, and character
+                      building. Held in the heart of a university that thrives on innovation and inclusion, the
+                      conference has consistently elevated the Model UN experience with high-caliber executive boards,
+                      diverse committees, and a vision that puts every delegate’s voice at the center.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>
+                      As we step into 2025, LITU-MUN continues to raise the bar—offering a platform where diplomacy is
+                      lived, not learned, and where every resolution echoes the commitment of future leaders ready to
+                      reshape the world.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="modal-body">
-                <p>Coming soon..</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- From the Desk of the Secretary-General -->
+        <div class="row">
+          <div class="col-md-12 wow animated fadeInUp">
+            <div class="recent-works">
+              <h3 class="text-center aboutHeaderText">From the Desk of the Secretary-General</h3>
+              <div class="message-body" style="padding: 20px;">
+                <h4 class="text-center" style="font-style: italic; margin-bottom: 30px;">
+                  “Some conferences teach you diplomacy. Others make you fall in love with it.”
+                </h4>
+                <p>
+                  Welcome to <strong>LITU-MUN 2025</strong>—a place where diplomacy is not just practiced, but lived.
+                  Here, every delegate writes a story worth remembering, and every committee becomes a catalyst for
+                  transformation.
+                </p>
+                <p>
+                  Now in its 9th illustrious edition, LITU-MUN has evolved from a passionate initiative into a proud
+                  tradition—nurtured by bold debates, impactful resolutions, and the unwavering spirit of young
+                  visionaries. Recognized as one of Central India’s premier MUNs, we stand tall as a symbol of
+                  excellence, leadership, and purpose-driven dialogue.
+                </p>
+                <p>
+                  This year, we’re not merely hosting a conference.<br>
+                  <strong>We’re crafting an experience.</strong>
+                </p>
+                <p>
+                  An experience that begins the moment you walk through our doors. Where prestige is earned through
+                  passion, and where powerful discourse is open to every voice—no matter how new or seasoned.
+                </p>
+                <p>
+                  At LITU-MUN, diplomacy is more than discussion—it’s a mindset. Each committee transforms into a
+                  classroom, each motion into a moment of growth, and each clash of opinions into a lesson in
+                  collaboration.
+                </p>
+                <p>
+                  You will sharpen your arguments. But more importantly, you will shape your character.
+                </p>
+                <p>
+                  At LITU-MUN 2025, you’ll find rivals who inspire, committees that challenge, and ideas that ignite.
+                  Whether you come seeking growth, wisdom, or the sheer thrill of debate, you will leave with something
+                  far greater—a sense of belonging to something truly meaningful.
+                </p>
+                <p class="text-center">
+                  <strong>To the dreamers, the debaters, the diplomats, and the disruptors—</strong><br>
+                  This is your invitation to be part of a legacy.<br>
+                  Not just to attend a conference, but to create history.
+                </p>
+                <br>
+                <p class="text-left">
+                  With passion and pride,<br>
+                  <strong>Kartik Kumavat</strong><br>
+                  Secretary-General<br>
+                  LITU-MUN 2025
+                </p>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- welcome letter Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Welcome Letter</h4>
+          </div>
+          <div class="modal-body">
+            <p>Coming soon..</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- end about section -->
+
+
+
+
+    <section class="committee-section">
+      <div class="text-center mb-5">
+        <h2 style="text-align: center;">COMMITTEES</h2>
+      </div>
+      <!-- 1. LOKSABHA
+2. MAHABHARATA
+3. UNGA-DISEC
+4. GA-LEGAL
+5. IPL AUCTION
+6. CABINET MISSION 1946
+7. NATIONAL & INTERNATIONAL PRESS -->
+
+      <div class="committee-grid">
+        <div class="committee-card">
+          <img src="img/committees/Loksabha logo.png" alt="UNSC">
+          <h3>LOKSABHA</h3>
+          <p>United Nations Security Council</p>
+          <button
+            onclick="openModal('UNSC', 'The Security Council takes the lead in determining the existence of a threat to the peace or act of aggression.')">Details</button>
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/mahabharat.png" alt="UNGA-DISEC">
+          <h3>MAHABHARATA</h3>
+          <p>Disarmament and International Security</p>
+          <button
+            onclick="openModal('UNGA-DISEC', 'The First of the six main committees of the United Nations General Assembly.')">Details</button>
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/ungaDisec.png" alt="UNHRC">
+          <h3>UNGA-DISEC</h3>
+          <p>United Nations Human Rights Council</p>
+          <button
+            onclick="openModal('UNHRC', 'An intergovernmental body within the UN system responsible for promoting and protecting human rights globally.')">Details</button>
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/ungaLegal.png" alt="UNHRC">
+          <h3>UNGA-LEGAL</h3>
+          <p>United Nations Human Rights Council</p>
+          <button
+            onclick="openModal('UNHRC', 'An intergovernmental body within the UN system responsible for promoting and protecting human rights globally.')">Details</button>
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/ipl.png" alt="WHO">
+          <h3>IPL AUCTION</h3>
+          <p>World Health Organization</p>
+          <button
+            onclick="openModal('WHO', 'A specialized agency of the United Nations responsible for international public health.')">Details</button>
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/cabinetMission.png" alt="UNEP">
+          <h3>CABINET MISSION 1946</h3>
+          <p>United Nations Environment Programme</p>
+          <button
+            onclick="openModal('UNEP', 'Responsible for coordinating responses to environmental issues within the United Nations system.')">Details</button>
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/Loksabha logo.png" alt="Lok Sabha">
+          <h3>NATIONAL & INTERNATIONAL PRESS</h3>
+          <p>Lower House of India’s Parliament</p>
+          <button
+            onclick="openModal('Lok Sabha', 'Discusses Indian domestic issues with a parliamentary simulation.')">Details</button>
+        </div>
+        <!-- <div class="committee-card">
+      <img src="img/committees/aippm-black.png" alt="AIPPM">
+      <h3>AIPPM</h3>
+      <p>All India Political Parties Meet</p>
+      <button onclick="openModal('AIPPM', 'A unique Indian committee where party representatives come together to deliberate.')">Details</button>
+    </div>
+    <div class="committee-card">
+      <img src="img/committees/ip-black.png" alt="IP">
+      <h3>IP</h3>
+      <p>International Press</p>
+      <button onclick="openModal('International Press', 'Reports the proceedings of committees with articles, photography, and interviews.')">Details</button>
+    </div> -->
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal">
+      <div class="modal">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <h2 id="modal-title"></h2>
+        <p id="modal-content"></p>
+      </div>
+    </div>
+
+
+
+    <!-- Registration forms section -->
+    <section id="register">
+      <div class="overlay" style="border: 2px solid black;">
+        <div class="container">
+          <div class="row">
+            <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
+              <h2>REGISTER HERE</h2>
+            </div>
+            <div class="regForms">
+              <a href="delegate-registration/index.htm" target="_blank" class="regFormsButton">Delegate Registration</a>
+              <a href="international-press-registration/index.htm" target="_blank" class="regFormsButton">International
+                Press Registration</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeeSEY0cP69tp4Obn_ogWG-9GcNNewweE5N1GU-nwLz6XyxA/viewform?usp=sf_link"
+                target="_blank" class="regFormsButton">Executive Board Registration</a>
             </div>
           </div>
         </div>
       </div>
-
-			<!-- end about section -->
-
-
-			<!-- Service section -->
-			<section id="service" style="background: rgba(0,0,0,.05);">
-				<div class="container">
-					<div class="row">
-
-						<div class="sec-title text-center">
-							<h2 class="wow animated bounceInLeft">COMMITTEES</h2>
-						</div>
-
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn">
-							<div class="service-item">
-								<div class="service-icon">
-									<!-- <i class="fa fa-home fa-3x"></i> -->
-                  <img src="img/committees/UNSC-black.png">
-								</div>
-								<h3>UNSC</h3>
-								<p>United Nation Security Council</p>
-                <button onclick="pop1()">Detail</button>
-
-							</div>
-<!-- model poup 1-->
-<div class="committees-detail" id = "p1" style="display:none;">
-  <button class="headcom">UNSC</button><br>
-  The Security Council takes the lead in determining the existence of a threat to the peace or act of aggression. It calls upon the parties to a dispute to settle it by peaceful means and recommends methods of adjustment or terms of settlement. In some cases, the Security Council can resort to imposing sanctions or even authorize the use of force to maintain or restore international peace and security.
-The Security Council also recommends to the General Assembly the appointment of the Secretary-General and the admission of new Members to the United Nations. And, together with the General Assembly, it elects the judges of the International Court of Justice.
-<br>
-<button onclick="close1()" class="close1">Close</button>
-</div>
-<script>
-
-function pop1(){
-  document.getElementById('p1').style.display = "block";
-}
-
-function close1(){
-  if(document.getElementById("p1").style.display == "block"){
-									document.getElementById("p1").style.display = "none";
-                }
-}
-</script>
-
-<!-- / end modal popup -->
-
-						</div>
-
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
-							<div class="service-item">
-								<div class="service-icon">
-									<!-- <i class="fa fa-tasks fa-3x"></i> -->
-                  <img src="img/committees/disec-black.png">
-								</div>
-								<h3>UNGA-DISEC</h3>
-								<p>United Nations General Assembly- Disarmament and International Security</p>
-                <button onclick="pop2()">Detail</button>
-
-							</div>
-
-              <!-- model poup 2-->
-              <div class="committees-detail" id = "p2" style="display:none;">
-                <button class="headcom">UNGA-DISEC</button>
-                <br>
-                The First of the six main committees at the GA of the United Nations, this committee deals with disarmament, global challenges and threats to peace that affect the international community and seeks out solutions to the challenges in the international security regime. It considers all disarmament and international security matters within the scope of the Charter or relating to the powers and functions of any other organ of the United Nations; the general principles of cooperation in the maintenance of international peace and security, as well as principles governing disarmament and the regulation of armaments; promotion of cooperative arrangements and measures aimed at strengthening stability through lower levels of armaments.
-              <br>
-              <button onclick="close2()" class="close2">Close</button>
-              </div>
-              <script>
-
-              function pop2(){
-                document.getElementById('p2').style.display = "block";
-              }
-
-              function close2(){
-                if(document.getElementById("p2").style.display == "block"){
-              									document.getElementById("p2").style.display = "none";
-                              }
-              }
-              </script>
-
-              <!-- / end modal popup -->
-
-						</div>
+    </section> <!-- end registration form -->
 
 
-
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.9s">
-							<div class="service-item">
-								<div class="service-icon">
-									<!-- <i class="fa fa-heart fa-3x"></i> -->
-                  <img src="img/committees/UNIDO-black.png">
-								</div>
-
-								<h3>UNIDO</h3>
-								<p>United Nations Industrial Development Organization</p>
-                <button onclick="pop3()">Detail</button>
-                <div class="committees-detail"></div>
-							</div>
-              <!-- model poup 2-->
-              <div class="committees-detail" id = "p3" style="display:none;">
-                <button class="headcom">UNIDO</button>
-                <br>
-                UNIDO is the specialized agency of the United Nations that promotes industrial development for poverty reduction, inclusive globalization and environmental sustainability.
-The mission of the United Nations Industrial Development Organization (UNIDO), as described in the Lima Declaration adopted at the fifteenth session of the UNIDO General Conference in 2013, is to promote and accelerate Inclusive and Sustainable Industrial Development (ISID) in developing countries and economies in transition.
-                <br>
-              <button onclick="close3()" class="close3">Close</button>
-              </div>
-              <script>
-
-              function pop3(){
-                document.getElementById('p3').style.display = "block";
-              }
-
-              function close3(){
-                if(document.getElementById("p3").style.display == "block"){
-                                document.getElementById("p3").style.display = "none";
-                              }
-              }
-              </script>
-
-              <!-- / end modal popup -->
-
-						</div>
-
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
-							<div class="service-item">
-								<div class="service-icon">
-									<!-- <i class="fa fa-clock-o fa-3x"></i> -->
-                  <img src="img/committees/uncso-black.png" width="50px" height="50px">
-								</div>
-								<h3>UNCSW</h3>
-								<p>United Nations Commission on the Status of Women</p>
-                <button onclick="pop4()">Detail</button>
-							</div>
-
-              <!-- model poup 4-->
-              <div class="committees-detail" id = "p4" style="display:none;">
-                <button class="headcom">UNCSW</button>
-                <br>
-                The Commission on the Status of Women (CSW) is the principal global intergovernmental body exclusively dedicated to the promotion of gender equality and the empowerment of women. A functional commission of the Economic and Social Council (ECOSOC), it was established by Council Resolution 11, of 21 June 1946.
-The CSW is instrumental in promoting women’s rights, documenting the reality of women’s lives throughout the world, and shaping global standards on gender equality and the empowerment of women.
-                <br>
-              <button onclick="close4()" class="close4">Close</button>
-              </div>
-              <script>
-
-              function pop4(){
-                document.getElementById('p4').style.display = "block";
-              }
-
-              function close4(){
-                if(document.getElementById("p4").style.display == "block"){
-                                document.getElementById("p4").style.display = "none";
-                              }
-              }
-              </script>
-
-              <!-- / end modal popup -->
-
-						</div>
-
-					</div>
-
-
-<div class="row">
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn">
-							<div class="service-item">
-								<div class="service-icon">
-									<!-- <i class="fa fa-home fa-3x"></i> -->
-                  <img src="img/committees/munlogo.png" width="50px" height="50px">
-								</div>
-								<h3>COPUOS</h3>
-								<p>The Committee on the Peaceful Uses of Outer Space</p>
-                <button onclick="pop5()">Detail</button>
-							</div>
-
-              <!-- model poup 5-->
-              <div class="committees-detail" id = "p5" style="display:none;">
-                <button class="headcom">COPUOS</button>
-                <br>
-                The Committee on the Peaceful Uses of Outer Space (COPUOS) was set up by the General Assembly in 1959 to govern the exploration and use of space for the benefit of all humanity: for peace, security and development. The Committee was tasked with reviewing international cooperation in peaceful uses of outer space, studying space-related activities that could be undertaken by the United Nations, encouraging space research programmes, and studying legal problems arising from the exploration of outer space.
-                <br>
-              <button onclick="close5()" class="close5">Close</button>
-              </div>
-              <script>
-
-              function pop5(){
-                document.getElementById('p5').style.display = "block";
-              }
-
-              function close5(){
-                if(document.getElementById("p5").style.display == "block"){
-                                document.getElementById("p5").style.display = "none";
-                              }
-              }
-              </script>
-
-              <!-- / end modal popup -->
-
-						</div>
-
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
-							<div class="service-item">
-								<div class="service-icon">
-									<!-- <i class="fa fa-tasks fa-3x"></i> -->
-                  <img src="img/committees/wto-black.png">
-								</div>
-								<h3>WTO</h3>
-								<p>World Trade Organization</p>
-                <button onclick="pop6()">Detail</button>
-							</div>
-              <!-- model poup 6-->
-              <div class="committees-detail" id = "p6" style="display:none;">
-                <button class="headcom">WTO</button>
-                <br>
-                The World Trade Organization (WTO) is the only global international organization dealing with the rules of trade between nations. At its heart are the WTO agreements, negotiated and signed by the bulk of the world’s trading nations and ratified in their parliaments. The goal is to help producers of goods and services, exporters, and importers conduct their business. It is an organization for trade opening, a forum for governments to negotiate trade agreements, and a place for them to settle trade disputes. Essentially, the WTO is a place where member governments try to sort out the trade problems they face with each other.
-                <br>
-              <button onclick="close6()" class="close6">Close</button>
-              </div>
-              <script>
-
-              function pop6(){
-                document.getElementById('p6').style.display = "block";
-              }
-
-              function close6(){
-                if(document.getElementById("p6").style.display == "block"){
-                                document.getElementById("p6").style.display = "none";
-                              }
-              }
-              </script>
-
-              <!-- / end modal popup -->
-						</div>
-
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
-							<div class="service-item">
-								<div class="service-icon">
-									<!-- <i class="fa fa-clock-o fa-3x"></i> -->
-                  <img src="img/committees/lok-sabha-black.png">
-								</div>
-								<h3>Lok Sabha</h3>
-								<p>The Lower House of India's Bicameral Parliament</p>
-                <button onclick="pop7()">Detail</button>
-							</div>
-              <!-- model poup 7-->
-              <div class="committees-detail" id = "p7" style="display:none;">
-                <button class="headcom">LOK SABHA</button>
-                <br>
-                The Lok Sabha (House of the People) is the Lower house of India's bicameral Parliament, with the Upper house being the Rajya Sabha. Members of the Lok Sabha are elected by adult universal suffrage and a first-past-the-post system to represent their respective constituencies, and they hold their seats for five years or until the body is dissolved by the President on the advice of the council of ministers. The house meets in the Lok Sabha Chambers of the Sansad Bhavan in New Delhi.
-                <br>
-              <button onclick="close7()" class="close7">Close</button>
-              </div>
-              <script>
-
-              function pop7(){
-                document.getElementById('p7').style.display = "block";
-              }
-
-              function close7(){
-                if(document.getElementById("p7").style.display == "block"){
-                                document.getElementById("p7").style.display = "none";
-                              }
-              }
-              </script>
-
-              <!-- / end modal popup -->
-						</div>
-
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.9s">
-							<div class="service-item">
-								<div class="service-icon">
-									<!-- <i class="fa fa-heart fa-3x"></i> -->
-                  <img src="img/committees/munlogo.png" height="50px" width="50px">
-								</div>
-
-								<h3>IP</h3>
-								<p>International Press</p>
-                <button onclick="pop8()">Detail</button>
-							</div>
-              <!-- model poup 8-->
-              <div class="committees-detail" id = "p8" style="display:none;">
-                <button class="headcom">IP</button>
-                <br>
-                This body provides a real time media coverage to the various committees in the MUN. Instead of representing the interests of a single country, the International Press Delegation allows participants to act as unbiased journalists, reporting on the proceedings of each simulation in the Conference. The members observe the simulations in the committees as they unfold and disseminate all the information to all the participants.
-                <br>
-              <button onclick="close8()" class="close8">Close</button>
-              </div>
-              <script>
-
-              function pop8(){
-                document.getElementById('p8').style.display = "block";
-              }
-
-              function close8(){
-                if(document.getElementById("p8").style.display == "block"){
-                                document.getElementById("p8").style.display = "none";
-                              }
-              }
-              </script>
-
-              <!-- / end modal popup -->
-						</div>
+    <!-- CONTACT Section -->
+    <section id="social" class="parallax">
+      <div class="overlay">
+        <div class="container">
+          <div class="row">
+            <div class="sec-title text-center white wow animated fadeInDown">
+              <h2>CONTACT</h2>
+            </div>
           </div>
-				</div>
-			</section>
-			<!-- end Service section -->
 
-			<!-- Testimonial section -->
-			<!-- <section id="testimonials" class="parallax">
-				<div class="overlay">
-					<div class="container">
-						<div class="row">
+          <!-- Top: Faculty Coordinator -->
+          <div class="row text-center">
+            <div class="col-md-12 wow animated zoomIn">
+              <p class="organizerName">Dr. P. J. Giri</p>
+              <p class="organizerPost">Faculty Co-ordinator, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
+          </div>
 
-							<div class="sec-title text-center white wow animated fadeInDown">
-								<h2 style="color:black;">TESTIMONIALS</h2>
-							</div>
+          <!-- First Row: 3 Organizers -->
+          <div class="row text-center">
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Kartik Kumavat</p>
+              <p class="organizerPost">Secretary General, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
 
-							<div id="testimonial" class=" wow animated fadeInUp">
-								<div class="testimonial-item text-center">
-									<img src="img/member-1.jpg" alt="Our Clients">
-									<div class="clearfix">
-										<span>Katty Flower</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-									</div>
-								</div>
-								<div class="testimonial-item text-center">
-									<img src="img/member-1.jpg" alt="Our Clients">
-									<div class="clearfix">
-										<span>Katty Flower</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-									</div>
-								</div>
-								<div class="testimonial-item text-center">
-									<img src="img/member-1.jpg" alt="Our Clients">
-									<div class="clearfix">
-										<span>Katty Flower</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-									</div>
-								</div>
-							</div>
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Adarsh Rangare</p>
+              <p class="organizerPost">Director General, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
 
-						</div>
-					</div>
-				</div>
-			</section> -->
-			<!-- end Testimonial section -->
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Ashish Wagh</p>
+              <p class="organizerPost">Deputy Secretary General, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
+          </div>
 
-      <!-- Registration forms section -->
-      <section id="register">
-       <div class="overlay" style="border: 2px solid black;">
-          <div class="container">
-            <div class="row">
-              <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
-								<h2>REGISTER HERE</h2>
-							</div>
-              <div class="regForms">
-                <a  href="delegate-registration/index.htm" target="_blank" class="regFormsButton">Delegate Registration</a>
-                <a href="international-press-registration/index.htm" target="_blank" class="regFormsButton">International Press Registration</a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeeSEY0cP69tp4Obn_ogWG-9GcNNewweE5N1GU-nwLz6XyxA/viewform?usp=sf_link" target="_blank" class="regFormsButton">Executive Board Registration</a>
-              </div>
+          <!-- Second Row: 3 Organizers -->
+          <div class="row text-center">
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Janhavi Manjule</p>
+              <p class="organizerPost">Deputy Director General, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
+
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Tejas Zade</p>
+              <p class="organizerPost">Treasurer, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
+
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Mayur Channe</p>
+              <p class="organizerPost">Management Attaché, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
             </div>
           </div>
         </div>
-       </div> <!-- end registration form -->
+      </div>
+    </section>
 
-			<!-- Social section -->
-			<section id="social" class="parallax">
-				<div class="overlay">
-					<div class="container">
-						<div class="row">
 
-							<div class="sec-title text-center white wow animated fadeInDown">
-								<h2>CONTACT</h2>
-							</div>
 
-							<ul class="social-button">
-								<li class="wow animated zoomIn"><p class="organizerName">Jayesh Motwani</p><br><p class="organizerPost">Secretary</p><br><p class="organizerMail">jayesh.motwani.eee15@iitbhu.ac.in</p><br><a href="#"><i class="fa fa-facebook fa-1x"></i></a></li>
-                <li class="wow animated zoomIn"><p class="organizerName">Jayesh Motwani</p><br><p class="organizerPost">Secretary</p><br><p class="organizerMail">jayesh.motwani.eee15@iitbhu.ac.in</p><br><a href="#"><i class="fa fa-facebook fa-1x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.3s"><p class="organizerName">Jogendra Singh</p><br><p class="organizerPost">Tech Head</p><br><p class="organizerMail">jogendra.kumar.phy15@iitbhu.ac.in</p><br><a href="#"><i class="fa fa-facebook fa-1x"></i></a></li>
-							</ul>
+  </main>
 
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end Social section -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row text-center">
+        <div class="footer-content">
+          <div class="wow animated fadeInDown">
+            <p style="color: #7f7f7f;">Follow us on social media!</p>
+          </div>
+          <div class="footer-social">
+            <ul>
+              <li class="wow animated zoomIn">
+                <a href="https://www.facebook.com/litmun22">
+                  <i class="fa fa-facebook fa-3x" style="color: #1877F2;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="0.3s">
+                <a href="#">
+                  <i class="fa fa-twitter fa-3x" style="color: #1DA1F2;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="0.6s">
+                <a href="https://www.instagram.com/litmun?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw==">
+                  <i class="fa fa-instagram fa-3x" style="color: #C13584;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="0.9s">
+                <a href="#">
+                  <i class="fa fa-youtube fa-3x" style="color: #FF0000;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="1.2s">
+                <a href="https://maps.app.goo.gl/t9zP3ChGp4NUJRWa8">
+                  <i class="fa fa-map-marker fa-3x" style="color: #EA4335;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="1.4s">
+                <a href="https://litu.edu.in/" target="_blank">
+                  <i class="fa fa-globe fa-3x" style="color: #e29b4a;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="1.6s">
+                <a href="https://www.linkedin.com/groups/4570269/"><i class="fa fa-linkedin fa-3x"
+                    style="color: #0A66C2;"></i></a>
+              </li>
+            </ul>
+          </div>
 
-		</main>
+          <p>Copyright &copy; 2024-2025 | LITUMUN</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-		<footer id="footer">
-			<div class="container">
-				<div class="row text-center">
-					<div class="footer-content">
-						<div class="wow animated fadeInDown">
-							<p style="color: #7f7f7f;">Follow us on social media!</p>
-						</div>
-						<div class="footer-social">
-							<ul>
-								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-facebook fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.6s"><a href="#"><i class="fa fa-google-plus fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.9s"><a href="#"><i class="fa fa-instagram fa-3x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="1.2s"><a href="#"><i class="fa fa-youtube fa-3x"></i></a></li>
-                <li class="wow animated zoomIn" data-wow-delay="1.2s"><a href="#"><i class="fa fa-map-marker fa-3x"></i></a></li>
-							</ul>
-						</div>
 
-						<p>Copyright &copy; 2017-2018 | LITUMUN</p>
-					</div>
-				</div>
-			</div>
-		</footer>
 
-		<!-- Essential jQuery Plugins
+
+  <!-- Essential jQuery Plugins
 		================================================== -->
-		<!-- Main jQuery -->
-        <script src="js/jquery-1.11.1.min.js"></script>
-		<!-- Twitter Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
-		<!-- Single Page Nav -->
-        <script src="js/jquery.singlePageNav.min.js"></script>
-		<!-- jquery.fancybox.pack -->
-        <script src="js/jquery.fancybox.pack.js"></script>
-		<!-- Owl Carousel -->
-        <script src="js/owl.carousel.min.js"></script>
-        <!-- jquery easing -->
-        <script src="js/jquery.easing.min.js"></script>
-        <!-- Fullscreen slider -->
-        <script src="js/jquery.slitslider.js"></script>
-        <script src="js/jquery.ba-cond.min.js"></script>
-		<!-- onscroll animation -->
-        <script src="js/wow.min.js"></script>
-		<!-- Custom Functions -->
-        <script src="js/main.js"></script>
-    </body>
+  <!-- Main jQuery -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <!-- Twitter Bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Single Page Nav -->
+  <script src="js/jquery.singlePageNav.min.js"></script>
+  <!-- jquery.fancybox.pack -->
+  <script src="js/jquery.fancybox.pack.js"></script>
+  <!-- Owl Carousel -->
+  <script src="js/owl.carousel.min.js"></script>
+  <!-- jquery easing -->
+  <script src="js/jquery.easing.min.js"></script>
+  <!-- Fullscreen slider -->
+  <script src="js/jquery.slitslider.js"></script>
+  <script src="js/jquery.ba-cond.min.js"></script>
+  <!-- onscroll animation -->
+  <script src="js/wow.min.js"></script>
+  <!-- Custom Functions -->
+  <script src="js/main.js"></script>
+</body>
+
+
 </html>
