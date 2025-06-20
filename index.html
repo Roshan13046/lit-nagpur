@@ -243,9 +243,6 @@
                 <!-- <a class="btn btn-blue btn-effect">Rise! Speak! Resolve!</a> -->
                 <h2>Rise! Speak! Resolve!</h2>
                 <div class="row">
-                  <!-- <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
-								<h2>REGISTER HERE</h2>
-							</div> -->
                   <div class="regForms">
                     <a href="delegate-registration/index.htm" target="_blank" class="newRegFormsButton">Event
                       Registration</a>
@@ -527,95 +524,76 @@
 
     <!-- end about section -->
 
-
-
-
+    <!-- Committees Section -->
     <section class="committee-section">
       <div class="text-center mb-5">
         <h2 style="text-align: center;">COMMITTEES</h2>
       </div>
-      <!-- 1. LOKSABHA
-2. MAHABHARATA
-3. UNGA-DISEC
-4. GA-LEGAL
-5. IPL AUCTION
-6. CABINET MISSION 1946
-7. NATIONAL & INTERNATIONAL PRESS -->
-
       <div class="committee-grid">
         <div class="committee-card">
           <img src="img/committees/Loksabha logo.png" alt="UNSC">
           <h3>LOKSABHA</h3>
           <p>United Nations Security Council</p>
           <button
-            onclick="openModal('UNSC', 'The Security Council takes the lead in determining the existence of a threat to the peace or act of aggression.')">Details</button>
+            onclick="openModal('LOKSABHA', 'The Lok Sabha at LITMUN brings together voices from across India to address key issues like education, employment, and the environment as delegates act as lawmakers and leaders. Every motion and vote shapes the future, highlighting the importance of representing all citizens, especially the underrepresented. This committee embodies democracy in action, where every voice can drive meaningful change.')">Details</button>
+
         </div>
         <div class="committee-card">
           <img src="img/committees/mahabharat.png" alt="UNGA-DISEC">
           <h3>MAHABHARATA</h3>
           <p>Disarmament and International Security</p>
           <button
-            onclick="openModal('UNGA-DISEC', 'The First of the six main committees of the United Nations General Assembly.')">Details</button>
+            onclick="openModal('MAHABHARATA', 'This year’s LITMUN committee immerses delegates in the Mahabharat, set in Hastinapur’s grand Sabha, where characters like Krishna, Bhishma, and Draupadi embody conflicting ideals and ethical struggles. Delegates will navigate complex moral dilemmas and debate the fate of an empire on the brink of war. The committee invites everyone to champion dialogue and justice, reimagining history and shaping a future guided by vision instead of violence.')">Details</button>
         </div>
         <div class="committee-card">
           <img src="img/committees/ungaDisec.png" alt="UNHRC">
           <h3>UNGA-DISEC</h3>
           <p>United Nations Human Rights Council</p>
           <button
-            onclick="openModal('UNHRC', 'An intergovernmental body within the UN system responsible for promoting and protecting human rights globally.')">Details</button>
+            onclick="openModal('UNGA-DISEC', 'The United Nations General Assembly First Committee (DISEC) addresses disarmament and international security, focusing on preventing the proliferation of weapons of mass destruction, regulating arms trade, and strengthening global arms control[1][2][3]. Through policy development and international cooperation, DISEC promotes peaceful conflict resolution and aims to ensure global stability and security.')">Details</button>
         </div>
         <div class="committee-card">
           <img src="img/committees/ungaLegal.png" alt="UNHRC">
           <h3>UNGA-LEGAL</h3>
           <p>United Nations Human Rights Council</p>
           <button
-            onclick="openModal('UNHRC', 'An intergovernmental body within the UN system responsible for promoting and protecting human rights globally.')">Details</button>
+            onclick="openModal('UNGA-LEGAL', 'The United Nations General Assembly Sixth Committee (UNGA Legal) is the main forum for legal issues, promoting the development and codification of international law and addressing topics such as counter-terrorism, state responsibility, and treaty law[1][2][8]. It considers reports from the International Law Commission, coordinates with other UN bodies, and upholds the rule of law. Through debate and consensus, the Sixth Committee fosters legal cooperation and a just international order[4][5][7].')">Details</button>
         </div>
         <div class="committee-card">
           <img src="img/committees/ipl.png" alt="WHO">
           <h3>IPL AUCTION</h3>
           <p>World Health Organization</p>
           <button
-            onclick="openModal('WHO', 'A specialized agency of the United Nations responsible for international public health.')">Details</button>
+            onclick="openModal('IPL AUCTION', 'The IPL Auction Committee brings together team owners, analysts, and fans to shape the future of cricket and sports equity through dynamic bidding and negotiation. Delegates have the power to inspire fairness, diversity, and inclusion with every decision they make. This unique forum transforms the excitement of the IPL auction into a platform for positive change in sports and society.')">Details</button>
         </div>
         <div class="committee-card">
           <img src="img/committees/cabinetMission.png" alt="UNEP">
           <h3>CABINET MISSION 1946</h3>
           <p>United Nations Environment Programme</p>
           <button
-            onclick="openModal('UNEP', 'Responsible for coordinating responses to environmental issues within the United Nations system.')">Details</button>
+            onclick="openModal('CABINET MISSION 1946', 'Responsible for coordinating responses to environmental issues within the United Nations system.')">Details</button>
         </div>
         <div class="committee-card">
           <img src="img/committees/Loksabha logo.png" alt="Lok Sabha">
           <h3>NATIONAL & INTERNATIONAL PRESS</h3>
           <p>Lower House of India’s Parliament</p>
           <button
-            onclick="openModal('Lok Sabha', 'Discusses Indian domestic issues with a parliamentary simulation.')">Details</button>
+            onclick="openModal('NATIONAL & INTERNATIONAL PRESS', 'At LITUMUN 2025, the national and international press delivers accurate coverage of debates, elevates conversations through analysis, and ensures transparency and accountability. Serving as a bridge between delegates and the public, the press highlights critical issues and fosters cultural understanding. Its indispensable role drives informed discussion and shapes the conference agenda.')">Details</button>
         </div>
-        <!-- <div class="committee-card">
-      <img src="img/committees/aippm-black.png" alt="AIPPM">
-      <h3>AIPPM</h3>
-      <p>All India Political Parties Meet</p>
-      <button onclick="openModal('AIPPM', 'A unique Indian committee where party representatives come together to deliberate.')">Details</button>
-    </div>
-    <div class="committee-card">
-      <img src="img/committees/ip-black.png" alt="IP">
-      <h3>IP</h3>
-      <p>International Press</p>
-      <button onclick="openModal('International Press', 'Reports the proceedings of committees with articles, photography, and interviews.')">Details</button>
-    </div> -->
       </div>
     </section>
+    <!-- end committees section -->
 
-    <!-- Modal -->
-    <div class="modal-overlay" id="modal">
-      <div class="modal">
-        <button class="modal-close" onclick="closeModal()">×</button>
+    <div id="modal" class="modal"
+      style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.5);">
+      <div
+        style="background-color:white; margin:10% auto; padding:20px; border-radius:8px; width:80%; max-width:600px; position:relative;">
+        <span onclick="closeModal()"
+          style="position:absolute; top:10px; right:20px; font-size:30px; cursor:pointer;">&times;</span>
         <h2 id="modal-title"></h2>
         <p id="modal-content"></p>
       </div>
     </div>
-
 
 
     <!-- Registration forms section -->
@@ -627,13 +605,15 @@
               <h2>REGISTER HERE</h2>
             </div>
             <div class="regForms">
-              <a href="delegate-registration/index.htm" target="_blank" class="regFormsButton">Delegate Registration</a>
-              <a href="international-press-registration/index.htm" target="_blank" class="regFormsButton">International
-                Press Registration</a>
+              <a href="delegate-registration/index.htm" target="_blank" class="newRegFormsButton">Event
+                Registration</a>
+              <a href="international-press-registration/index.htm" target="_blank"
+                class="newRegFormsButton">Accomodation Registration</a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeeSEY0cP69tp4Obn_ogWG-9GcNNewweE5N1GU-nwLz6XyxA/viewform?usp=sf_link"
-                target="_blank" class="regFormsButton">Executive Board Registration</a>
+                target="_blank" class="newRegFormsButton">Other Registration</a>
             </div>
           </div>
+
         </div>
       </div>
     </section> <!-- end registration form -->
@@ -760,6 +740,26 @@
   </footer>
 
 
+  <script>
+    function openModal(title, content) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-content').textContent = content;
+      document.getElementById('modal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    window.onclick = function (event) {
+      const modal = document.getElementById('modal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
 
 
   <!-- Essential jQuery Plugins
