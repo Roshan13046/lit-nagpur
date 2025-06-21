@@ -959,7 +959,7 @@ ul.external li a:hover {
 ==================================================================*/
 
 #social {
-    background-image: url(../img/slider/mun5.jpg);
+    background-image: url(../img/bg-img.jpeg);
     padding: 0;
 }
 
@@ -1586,7 +1586,6 @@ textarea.form-control {
     background-size: cover;
     background-position: center;
 }
-
 
 .regForm1 {
     color: white;
