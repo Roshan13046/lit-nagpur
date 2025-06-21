@@ -266,47 +266,48 @@ main>section {
 
 /* Preloader Container */
 #preloader {
-  background-color: #fff;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Dots Loader */
 .dots-loader {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 .dots-loader div {
-  width: 15px;
-  height: 15px;
-  background-color: #2E2E2E;
-  border-radius: 50%;
-  animation: bounce 0.6s infinite alternate;
+    width: 15px;
+    height: 15px;
+    background-color: #2E2E2E;
+    border-radius: 50%;
+    animation: bounce 0.6s infinite alternate;
 }
 
 .dots-loader div:nth-child(2) {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 .dots-loader div:nth-child(3) {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 @keyframes bounce {
-  from {
-    transform: translateY(0);
-    opacity: 0.6;
-  }
-  to {
-    transform: translateY(-15px);
-    opacity: 1;
-  }
+    from {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+
+    to {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
 }
 
 
@@ -1568,13 +1569,24 @@ textarea.form-control {
 }
 
 /*register section*/
-#register {
-    background: url(../img/slider/mun9.jpg);
+/* #register {
+    background: url(../img/slider/mun7.jpg);
     background-color: rgba(0, 0, 0, .5);
     background-blend-mode: multiply;
     padding: 0;
-    background-size: contain;
+    background-size: cover;
+} */
+
+#register {
+    background: url(../img/slider/mun9.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    padding: 80px 0;
+    /* top and bottom padding */
+    background-size: cover;
+    background-position: center;
 }
+
 
 .regForm1 {
     color: white;
@@ -1854,3 +1866,5 @@ textarea.form-control {
         height: auto;
     }
 }
+
+

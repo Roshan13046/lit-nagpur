@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <!-- Same head content as about.html -->
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/MainLogos/mainLogo1.png">
+  <link rel="icon" type="image/png" href="img/MainLogos/mainLogo1.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/MainLogos/mainLogo1.png" sizes="16x16">
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="theme-color" content="#000000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/slit-slider.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/modernizr-2.6.2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>LITUMUN - Committees</title>
+
+  <style>
+    .committee-section {
+      background: rgba(0, 0, 0, 0.05);
+      padding: 60px 0;
+    }
+
+    .committee-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .committee-card {
+      background: #fff;
+      border-radius: 10px;
+      width: 260px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .committee-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .committee-card img {
+      height: 178px;
+      margin-bottom: 15px;
+    }
+
+    .committee-card h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .committee-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .committee-card button {
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      /* transition: background 0.3s ease; */
+    }
+
+    .committee-card button:hover {
+      background-color: #003f80;
+    }
+
+  </style>
+</head>
+<body id="body">
+  <!-- Same header as about.html -->
+      <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+    <div class="container">
+      <div class="navbar-header d-flex align-items-center">
+        <!-- responsive nav button -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- /responsive nav button -->
+
+        <!-- logo and title -->
+        <div class="brand-wrapper">
+          <img src="img/MainLogos/mainLogo1.png" class="head-logo" alt="Logo">
+          <h1 class="navbar-brand munLogoTitle">LITUMUN</h1>
+        </div>
+      </div>
+
+      <!-- main nav -->
+      <nav class="collapse navbar-collapse navbar-right" role="navigation">
+        <ul id="nav" class="nav navbar-nav">
+          <li><a href="index.html" target="_blank" onclick="window.open('index.html', '_blank'); return false;">HOME</a></li>
+          <li><a href="about.html" target="_blank" onclick="window.open('about.html', '_blank'); return false;">ABOUT US</a></li>
+          <li><a href="committees.html" target="_blank" onclick="window.open('committees.html', '_blank'); return false;">COMMITTEES</a></li>
+          <li><a href="register.html" target="_blank" onclick="window.open('register.html', '_blank'); return false;">REGISTER</a></li>
+          <li><a href="secretariat.html" target="_blank" onclick="window.open('secretariat.html', '_blank'); return false;">SECRETARIAT</a></li>
+          <li><a href="contact.html" target="_blank" onclick="window.open('contact.html', '_blank'); return false;">CONTACT</a></li>
+        </ul>
+      </nav>
+      <!-- /main nav -->
+    </div>
+  </header>
+
+  <main class="site-content" role="main">
+    <!-- Committees Section -->
+    <section id="service" class="committee-section">
+      <div class="text-center mb-5">
+        <h2 style="text-align: center;">COMMITTEES</h2>
+      </div>
+      <div class="committee-grid">
+        <div class="committee-card">
+          <img src="img/committees/Loksabha logo.png" class="committeelogo" alt="UNSC">
+          <h3>LOKSABHA</h3>
+          <p>Loksabha Event</p>
+          <button
+            onclick="openModal('LOKSABHA', 'The Lok Sabha at LITMUN brings together voices from across India to address key issues like education, employment, and the environment as delegates act as lawmakers and leaders. Every motion and vote shapes the future, highlighting the importance of representing all citizens, especially the underrepresented. This committee embodies democracy in action, where every voice can drive meaningful change.')">Details</button>
+
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/mahabharat.png" class="committeelogo" alt="UNGA-DISEC">
+          <h3>MAHABHARATA</h3>
+          <p>Mahabharat Event</p>
+          <button
+          onclick="openModal('MAHABHARATA', 'This year’s LITMUN committee immerses delegates in the Mahabharat, set in Hastinapur’s grand Sabha, where characters like Krishna, Bhishma, and Draupadi embody conflicting ideals and ethical struggles. Delegates will navigate complex moral dilemmas and debate the fate of an empire on the brink of war. The committee invites everyone to champion dialogue and justice, reimagining history and shaping a future guided by vision instead of violence.')">Details</button>
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/ungaDisec.png" alt="UNHRC">
+          <h3>UNGA-DISEC</h3>
+          <p>UNGA-DISEC Event</p>
+          <button
+            onclick="openModal('UNGA-DISEC', 'The United Nations General Assembly First Committee (DISEC) addresses disarmament and international security, focusing on preventing the proliferation of weapons of mass destruction, regulating arms trade, and strengthening global arms control[1][2][3]. Through policy development and international cooperation, DISEC promotes peaceful conflict resolution and aims to ensure global stability and security.')">Details</button>
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/ungaLegal.png" alt="UNHRC">
+          <h3>UNGA-LEGAL</h3>
+          <p>UNGA-LEGAL Event</p>
+          <button
+            onclick="openModal('UNGA-LEGAL', 'The United Nations General Assembly Sixth Committee (UNGA Legal) is the main forum for legal issues, promoting the development and codification of international law and addressing topics such as counter-terrorism, state responsibility, and treaty law[1][2][8]. It considers reports from the International Law Commission, coordinates with other UN bodies, and upholds the rule of law. Through debate and consensus, the Sixth Committee fosters legal cooperation and a just international order[4][5][7].')">Details</button>
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/ipl.png" alt="WHO">
+          <h3>IPL AUCTION</h3>
+          <p>Indian Premier League Event</p>
+          <button
+            onclick="openModal('IPL AUCTION', 'The IPL Auction Committee brings together team owners, analysts, and fans to shape the future of cricket and sports equity through dynamic bidding and negotiation. Delegates have the power to inspire fairness, diversity, and inclusion with every decision they make. This unique forum transforms the excitement of the IPL auction into a platform for positive change in sports and society.')">Details</button>
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/cabinetMission.png" alt="UNEP">
+          <h3>CABINET MISSION 1946</h3>
+          <p>Cabinet Misssion 1946 Event</p>
+          <button
+          onclick="openModal('CABINET MISSION 1946', 'The Cabinet Mission 1946 is one of the most intense and historic crisis committees in this MUN. It offers a rare chance to represent iconic leaders like Nehru, Jinnah, and Patel. More than just a debate, it’s a reenactment of the critical events that shaped the future of India and Pakistan. Step into history, lead the dialogue, and rewrite the legacy.')">Details</button>
+        </div>
+        <div class="committee-card">
+          <img src="img/committees/Loksabha logo.png" alt="Lok Sabha">
+          <h3>NATIONAL & INTERNATIONAL PRESS</h3>
+          <p>National International Press Event</p>
+          <button
+            onclick="openModal('NATIONAL & INTERNATIONAL PRESS', 'At LITUMUN 2025, the national and international press delivers accurate coverage of debates, elevates conversations through analysis, and ensures transparency and accountability. Serving as a bridge between delegates and the public, the press highlights critical issues and fosters cultural understanding. Its indispensable role drives informed discussion and shapes the conference agenda.')">Details</button>
+        </div>
+      </div>
+    </section>
+    <!-- end committees section -->
+
+    <div id="modal" class="modal"
+      style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.5);">
+      <div
+        style="background-color:white; margin:10% auto; padding:20px; border-radius:8px; width:80%; max-width:600px; position:relative;">
+        <span onclick="closeModal()"
+          style="position:absolute; top:10px; right:20px; font-size:30px; cursor:pointer;">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-content"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row text-center">
+        <div class="footer-content">
+          <div class="wow animated fadeInDown">
+            <p style="color: #7f7f7f;">Follow us on social media!</p>
+          </div>
+          <div class="footer-social">
+            <ul>
+              <li class="wow animated zoomIn">
+                <a href="https://www.facebook.com/litmun22">
+                  <i class="fa fa-facebook fa-3x" style="color: #1877F2;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="0.3s">
+                <a href="#">
+                  <i class="fa fa-twitter fa-3x" style="color: #1DA1F2;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="0.6s">
+                <a href="https://www.instagram.com/litmun?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw==">
+                  <i class="fa fa-instagram fa-3x" style="color: #C13584;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="0.9s">
+                <a href="#">
+                  <i class="fa fa-youtube fa-3x" style="color: #FF0000;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="1.2s">
+                <a href="https://maps.app.goo.gl/t9zP3ChGp4NUJRWa8">
+                  <i class="fa fa-map-marker fa-3x" style="color: #EA4335;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="1.4s">
+                <a href="https://litu.edu.in/" target="_blank">
+                  <i class="fa fa-globe fa-3x" style="color: #e29b4a;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="1.6s">
+                <a href="https://www.linkedin.com/groups/4570269/"><i class="fa fa-linkedin fa-3x"
+                    style="color: #0A66C2;"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <p>Copyright &copy; 2024-2025 | LITUMUN</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.singlePageNav.min.js"></script>
+  <script src="js/jquery.fancybox.pack.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/jquery.slitslider.js"></script>
+  <script src="js/jquery.ba-cond.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <script>
+    function openModal(title, content) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-content').textContent = content;
+      document.getElementById('modal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
