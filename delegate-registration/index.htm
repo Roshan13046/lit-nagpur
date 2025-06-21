@@ -97,6 +97,9 @@
                         <div class="form-group">
                             <label class="col-lg-2 control-label">Committee Preferences</label>
                             <div class="col-lg-10">
+                                <p class="help-block" style="color: #666; font-size: 12px; margin-bottom: 10px;">
+                                    <strong>Note:</strong> You can select a maximum of 3 committees. Selected: <span id="selectedCount">0</span>/3
+                                </p>
                                 <div class="checkbox">
                                     <label>
                                     <input type="checkbox" class="committee-checkbox" value="CABINET MISSION 1946" data-target="cabinetMissionField"> CABINET MISSION 1946
@@ -353,18 +356,54 @@
         $.backstretch(["img/44.jpg", "img/images.jpg"], { duration: 4500, fade: 1500 });
     </script>
     <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-        const checkboxes = document.querySelectorAll('.committee-checkbox');
-        const isAnyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+        // Function to update the selected count display
+        function updateSelectedCount() {
+            const checkedBoxes = document.querySelectorAll('.committee-checkbox:checked');
+            const countDisplay = document.getElementById('selectedCount');
+            countDisplay.textContent = checkedBoxes.length;
 
-        if (!isAnyChecked) {
-            event.preventDefault(); // Prevent form submission
-            alert('Please select at least one committee preference.');
+            // Change color based on selection count
+            if (checkedBoxes.length === 3) {
+                countDisplay.style.color = '#d9534f'; // Red when at limit
+                countDisplay.parentElement.style.fontWeight = 'bold';
+            } else {
+                countDisplay.style.color = '#5bc0de'; // Blue for normal count
+                countDisplay.parentElement.style.fontWeight = 'normal';
+            }
         }
-    });
+
+        // Form submission validation
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const checkboxes = document.querySelectorAll('.committee-checkbox');
+            const checkedBoxes = document.querySelectorAll('.committee-checkbox:checked');
+
+            if (checkedBoxes.length === 0) {
+                event.preventDefault(); // Prevent form submission
+                alert('Please select at least one committee preference.');
+                return;
+            }
+
+            if (checkedBoxes.length > 3) {
+                event.preventDefault(); // Prevent form submission
+                alert('You can select a maximum of 3 committees. Please uncheck some options.');
+                return;
+            }
+        });
+
+        // Checkbox change event handler
         document.querySelectorAll('.committee-checkbox').forEach(checkbox => {
             checkbox.addEventListener('change', function() {
+                const checkedBoxes = document.querySelectorAll('.committee-checkbox:checked');
                 const targetField = document.getElementById(this.dataset.target);
+
+                // If trying to check more than 3 boxes, prevent it
+                if (this.checked && checkedBoxes.length > 3) {
+                    this.checked = false;
+                    alert('You can only select a maximum of 3 committees. Please uncheck another option first.');
+                    return;
+                }
+
+                // Update the target field
                 targetField.disabled = !this.checked; // Enable if checked, disable if unchecked
                 if (this.checked) {
                     targetField.placeholder = this.value; // Set placeholder to the committee name
@@ -372,8 +411,31 @@
                 } else {
                     targetField.placeholder = ''; // Clear placeholder if unchecked
                     targetField.removeAttribute('required'); // Remove mandatory requirement
+                    targetField.value = ''; // Clear any entered value
                 }
+
+                // Update the selected count display
+                updateSelectedCount();
+
+                // Disable/enable other checkboxes based on selection count
+                const allCheckboxes = document.querySelectorAll('.committee-checkbox');
+                const currentCheckedCount = document.querySelectorAll('.committee-checkbox:checked').length;
+
+                allCheckboxes.forEach(cb => {
+                    if (!cb.checked && currentCheckedCount >= 3) {
+                        cb.disabled = true;
+                        cb.parentElement.style.opacity = '0.5';
+                    } else {
+                        cb.disabled = false;
+                        cb.parentElement.style.opacity = '1';
+                    }
+                });
             });
+        });
+
+        // Initialize the count display on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateSelectedCount();
         });
     </script>
 </body>
