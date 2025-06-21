@@ -21,6 +21,89 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   <title>LITUMUN - Contact</title>
+
+  <style>
+    .round-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .hexagonal-round-image {
+      width: 265px;
+      height: 265px;
+      border-radius: 22%;
+      object-fit: cover;
+    }
+
+    .contact-card {
+      background: rgba(219, 215, 215, 0.05);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    .committee-section {
+      background: rgba(0, 0, 0, 0.05);
+      padding: 60px 0;
+    }
+
+    .committee-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .committee-card {
+      background: #fff;
+      border-radius: 10px;
+      width: 260px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .committee-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .committee-card img {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .committee-card h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .committee-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .committee-card button {
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .committee-card button:hover {
+      background-color: #003f80;
+    }
+  </style>
 </head>
 <body id="body">
   <!-- Same header as previous pages -->
@@ -51,32 +134,64 @@
   </header>
 
   <main class="site-content" role="main">
-    <!-- Contact Section -->
-    <section id="social">
-      <div class="container">
-        <div class="row">
-          <div class="sec-title text-center">
-            <h2>Contact Us</h2>
-          </div>
-          
-          <div class="col-md-6">
-            <div class="contact-card">
-              <h3>Get in Touch</h3>
-              <p><i class="fa fa-map-marker"></i> Laxminarayan Innovation Technological University, Nagpur</p>
-              <p><i class="fa fa-envelope"></i> litumun@example.com</p>
-              <p><i class="fa fa-phone"></i> +91 1234567890</p>
+    <!-- CONTACT Section -->
+    <section id="social" class="parallax">
+      <div class="overlay">
+        <div class="container">
+          <div class="row">
+            <div class="sec-title text-center white wow animated fadeInDown">
+              <h2>CONTACT</h2>
             </div>
           </div>
-          
-          <div class="col-md-6">
-            <div class="contact-card">
-              <h3>Follow Us</h3>
-              <div class="social-icons">
-                <a href="https://www.facebook.com/litmun22"><i class="fa fa-facebook fa-2x"></i></a>
-                <a href="https://www.instagram.com/litmun"><i class="fa fa-instagram fa-2x"></i></a>
-                <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-                <a href="https://www.linkedin.com/groups/4570269/"><i class="fa fa-linkedin fa-2x"></i></a>
-              </div>
+
+          <!-- Top: Faculty Coordinator -->
+          <div class="row text-center">
+            <div class="col-md-12 wow animated zoomIn">
+              <p class="organizerName">Dr. P. J. Giri</p>
+              <p class="organizerPost">Faculty Co-ordinator, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
+          </div>
+
+          <!-- First Row: 3 Organizers -->
+          <div class="row text-center">
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Kartik Kumavat</p>
+              <p class="organizerPost">Secretary General, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
+
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Adarsh Rangare</p>
+              <p class="organizerPost">Director General, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
+
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Ashish Wagh</p>
+              <p class="organizerPost">Deputy Secretary General, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
+          </div>
+
+          <!-- Second Row: 3 Organizers -->
+          <div class="row text-center">
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Janhavi Manjule</p>
+              <p class="organizerPost">Deputy Director General, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
+
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Tejas Zade</p>
+              <p class="organizerPost">Treasurer, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
+            </div>
+
+            <div class="col-md-4 wow animated zoomIn">
+              <p class="organizerName">Mayur Channe</p>
+              <p class="organizerPost">Management Attaché, LITUMUN 2025</p>
+              <a href="#"><i class="fa fa-linkedin fa-1x" style="color: #0077B5;"></i></a>
             </div>
           </div>
         </div>
@@ -84,7 +199,6 @@
     </section>
   </main>
 
-  <!-- Same footer as previous pages -->
   <footer id="footer">
     <div class="container">
       <div class="row text-center">
@@ -99,9 +213,38 @@
                   <i class="fa fa-facebook fa-3x" style="color: #1877F2;"></i>
                 </a>
               </li>
-              <!-- Other social media links -->
+              <li class="wow animated zoomIn" data-wow-delay="0.3s">
+                <a href="#">
+                  <i class="fa fa-twitter fa-3x" style="color: #1DA1F2;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="0.6s">
+                <a href="https://www.instagram.com/litmun?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw==">
+                  <i class="fa fa-instagram fa-3x" style="color: #C13584;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="0.9s">
+                <a href="#">
+                  <i class="fa fa-youtube fa-3x" style="color: #FF0000;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="1.2s">
+                <a href="https://maps.app.goo.gl/t9zP3ChGp4NUJRWa8">
+                  <i class="fa fa-map-marker fa-3x" style="color: #EA4335;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="1.4s">
+                <a href="https://litu.edu.in/" target="_blank">
+                  <i class="fa fa-globe fa-3x" style="color: #e29b4a;"></i>
+                </a>
+              </li>
+              <li class="wow animated zoomIn" data-wow-delay="1.6s">
+                <a href="https://www.linkedin.com/groups/4570269/"><i class="fa fa-linkedin fa-3x"
+                    style="color: #0A66C2;"></i></a>
+              </li>
             </ul>
           </div>
+
           <p>Copyright &copy; 2024-2025 | LITUMUN</p>
         </div>
       </div>

@@ -35,6 +35,89 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <title>LITUMUN - About Us</title>
+
+  <style>
+    .round-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .hexagonal-round-image {
+      width: 265px;
+      height: 265px;
+      border-radius: 22%;
+      object-fit: cover;
+    }
+
+    .contact-card {
+      background: rgba(219, 215, 215, 0.05);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    .committee-section {
+      background: rgba(0, 0, 0, 0.05);
+      padding: 60px 0;
+    }
+
+    .committee-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .committee-card {
+      background: #fff;
+      border-radius: 10px;
+      width: 260px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .committee-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .committee-card img {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .committee-card h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .committee-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .committee-card button {
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .committee-card button:hover {
+      background-color: #003f80;
+    }
+  </style>
 </head>
 <body id="body">
   <!-- Fixed Navigation -->
@@ -72,6 +155,30 @@
     <!-- About Section -->
     <section id="about">
       <div class="container">
+
+        <!-- About LIT-Nagpur University -->
+        <div class="row">
+          <div class="col-md-12 wow animated fadeInUp">
+            <div class="welcome-block">
+              <h3 class="text-center aboutHeaderText">About LIT-Nagpur University</h3>
+              <div class="message-body">
+                <p>
+                  Consistent efforts put in by the organisers have made LIT MUN one of the most sought-after events for
+                  MUNers across the country.<br>
+                  So MUNers, mark the dates and be ready for some serious debating, exhausting sessions, and a lot of
+                  intellectual enrichment.
+                </p>
+                <p>
+                  Accredited with an A+ NAAC grade and home to NBA-accredited programs, the university offers a
+                  future-focused education on its expansive 78-acre campus, blending world-class infrastructure with
+                  decades of academic distinction. With strong industry collaboration and a culture of research and
+                  leadership, LIT University is where legacy meets limitless potential.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Our Legacy Carousel -->
         <div class="row">
           <div class="col-md-12 wow animated fadeInUp">
@@ -89,7 +196,22 @@
                       most passionate and articulate young minds from across the country.
                     </p>
                   </div>
-                  <!-- Additional carousel items -->
+                  <div class="carousel-item">
+                    <p>
+                      With a legacy built on the pillars of learning, introspection, and transformation, LITU-MUN stands
+                      as more than just a simulation—it's a celebration of dialogue, global awareness, and character
+                      building. Held in the heart of a university that thrives on innovation and inclusion, the
+                      conference has consistently elevated the Model UN experience with high-caliber executive boards,
+                      diverse committees, and a vision that puts every delegate's voice at the center.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>
+                      As we step into 2025, LITU-MUN continues to raise the bar—offering a platform where diplomacy is
+                      lived, not learned, and where every resolution echoes the commitment of future leaders ready to
+                      reshape the world.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -110,16 +232,76 @@
                   Here, every delegate writes a story worth remembering, and every committee becomes a catalyst for
                   transformation.
                 </p>
-                <!-- Additional content -->
+                <p>
+                  Now in its 9th illustrious edition, LITU-MUN has evolved from a passionate initiative into a proud
+                  tradition—nurtured by bold debates, impactful resolutions, and the unwavering spirit of young
+                  visionaries. Recognized as one of Central India's premier MUNs, we stand tall as a symbol of
+                  excellence, leadership, and purpose-driven dialogue.
+                </p>
+                <p>
+                  This year, we're not merely hosting a conference.<br>
+                  <strong>We're crafting an experience.</strong>
+                </p>
+                <p>
+                  An experience that begins the moment you walk through our doors. Where prestige is earned through
+                  passion, and where powerful discourse is open to every voice—no matter how new or seasoned.
+                </p>
+                <p>
+                  At LITU-MUN, diplomacy is more than discussion—it's a mindset. Each committee transforms into a
+                  classroom, each motion into a moment of growth, and each clash of opinions into a lesson in
+                  collaboration.
+                </p>
+                <p>
+                  You will sharpen your arguments. But more importantly, you will shape your character.
+                </p>
+                <p>
+                  At LITU-MUN 2025, you'll find rivals who inspire, committees that challenge, and ideas that ignite.
+                  Whether you come seeking growth, wisdom, or the sheer thrill of debate, you will leave with something
+                  far greater—a sense of belonging to something truly meaningful.
+                </p>
+                <p class="text-center">
+                  <strong>To the dreamers, the debaters, the diplomats, and the disruptors—</strong><br>
+                  This is your invitation to be part of a legacy.<br>
+                  Not just to attend a conference, but to create history.
+                </p>
+                <br>
+                <p class="text-left">
+                  With passion and pride,<br>
+                  <strong>Kartik Kumavat</strong><br>
+                  Secretary-General<br>
+                  LITU-MUN 2025
+                </p>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
+
+
+    <!-- welcome letter Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Welcome Letter</h4>
+          </div>
+          <div class="modal-body">
+            <p>Coming soon..</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- end about section -->
   </main>
 
-  <!-- Footer -->
   <footer id="footer">
     <div class="container">
       <div class="row text-center">
@@ -165,6 +347,7 @@
               </li>
             </ul>
           </div>
+
           <p>Copyright &copy; 2024-2025 | LITUMUN</p>
         </div>
       </div>
