@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
   <!-- Same head content as previous pages -->
   <meta charset="UTF-8">
@@ -105,31 +106,46 @@
     }
   </style>
 </head>
+
 <body id="body">
   <!-- Same header as previous pages -->
   <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
     <div class="container">
       <div class="navbar-header d-flex align-items-center">
+        <!-- responsive nav button -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <!-- /responsive nav button -->
+
+        <!-- logo and title -->
         <div class="brand-wrapper">
           <img src="img/MainLogos/mainLogo1.png" class="head-logo" alt="Logo">
           <h1 class="navbar-brand munLogoTitle">LITUMUN</h1>
         </div>
       </div>
+
+      <!-- main nav -->
       <nav class="collapse navbar-collapse navbar-right" role="navigation">
         <ul id="nav" class="nav navbar-nav">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="about.html">ABOUT US</a></li>
-          <li><a href="committees.html">COMMITTEES</a></li>
-          <li><a href="register.html">REGISTER</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="index.html" target="_blank" onclick="window.open('index.html', '_blank'); return false;">HOME</a>
+          </li>
+          <li><a href="about.html" target="_blank" onclick="window.open('about.html', '_blank'); return false;">ABOUT
+              US</a></li>
+          <li><a href="committees.html" target="_blank"
+              onclick="window.open('committees.html', '_blank'); return false;">COMMITTEES</a></li>
+          <li><a href="register.html" target="_blank"
+              onclick="window.open('register.html', '_blank'); return false;">REGISTER</a></li>
+          <li><a href="secretariat.html" target="_blank"
+              onclick="window.open('secretariat.html', '_blank'); return false;">SECRETARIAT</a></li>
+          <li><a href="contact.html" target="_blank"
+              onclick="window.open('contact.html', '_blank'); return false;">CONTACT</a></li>
         </ul>
       </nav>
+      <!-- /main nav -->
     </div>
   </header>
 
@@ -139,13 +155,15 @@
       <div class="overlay" style="border: 2px solid black;">
         <div class="container">
           <div class="row">
-            <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:5%;">
-              <h2>REGISTER HERE</h2>
+            <div class="sec-title text-center white wow animated fadeInDown" style="margin-top:50px;">
+              <h2 style="color: wheat;">REGISTER HERE</h2>
             </div>
             <div class="regForms">
               <a href="delegate-registration/index.htm" target="_blank" class="newRegFormsButton">Event Registration</a>
-              <a href="international-press-registration/index.htm" target="_blank" class="newRegFormsButton">Accomodation Registration</a>
-              <a href="https://docs.google.com/document/d/1X6UR3GIIYtE_faomMCb7SgFSeTVcMdjA/edit?usp=drive_link&ouid=111324114491624135142&rtpof=true&sd=true" target="_blank" class="newRegFormsButton">View Event Details</a>
+              <a href="international-press-registration/index.htm" target="_blank"
+                class="newRegFormsButton">Accomodation Registration</a>
+              <a href="https://docs.google.com/document/d/1X6UR3GIIYtE_faomMCb7SgFSeTVcMdjA/edit?usp=drive_link&ouid=111324114491624135142&rtpof=true&sd=true"
+                target="_blank" class="newRegFormsButton">View Event Details</a>
             </div>
           </div>
         </div>
@@ -217,4 +235,5 @@
   <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>
