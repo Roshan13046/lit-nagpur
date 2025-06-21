@@ -1830,7 +1830,7 @@ textarea.form-control {
     align-items: center;
 }
 
-
+/* 
 .mainlogo {
     width: 5%;
 }
@@ -1839,5 +1839,18 @@ textarea.form-control {
     .mainlogo {
         width: 230px;
         height: 230px;
+    }
+} */
+
+.mainlogo {
+    width: 150px;
+    height: auto;
+}
+
+/* For tablets and larger screens */
+@media screen and (min-width: 768px) {
+    .mainlogo {
+        width: 230px;
+        height: auto;
     }
 }
